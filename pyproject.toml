@@ -1,0 +1,29 @@
+[project]
+name = "knowledge-agent2-0"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tejas K Jaiswal", email = "tejasjaiswal9711@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chromadb>=1.5.9",
+    "fastapi>=0.142.2",
+    "ollama>=0.6.3",
+    "pymupdf>=1.28.2",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+knowledge-agent2-0 = "knowledge_agent2_0:main"
+knowledge-agent2-0-api = "knowledge_agent2_0.api:run"
+
+[build-system]
+requires = ["uv_build>=0.12.4,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
